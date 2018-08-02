@@ -19,19 +19,13 @@ Gem::Specification.new do |s|
 
   s.has_rdoc          = false
 
-  s.add_dependency('faraday', ['>= 0.8.0', '< 0.10.0'])
-  s.add_dependency('multi_json')
+  s.add_dependency('faraday', ['~> 0.15.0'])
+  s.add_dependency('multi_json', '~> 1.13')
+  s.add_dependency('activesupport', '~> 5.0')
+  s.add_dependency('activemodel', '~> 5.0')
 
-  if RUBY_VERSION < '1.9.3'
-    s.add_dependency('i18n', '<= 0.6.11')
-    s.add_dependency('activesupport', '~> 3.0')
-    s.add_dependency('activemodel', '~> 3.0')
-  else
-    s.add_dependency('activesupport', '>= 3.0')
-    s.add_dependency('activemodel', '>= 3.0')
-  end
-
-  s.add_development_dependency('rake')
-  s.add_development_dependency('yard')
-  s.add_development_dependency('test-unit-minitest', '>= 0.9.1')
+  s.add_development_dependency('rake', '~> 12.3')
+  s.add_development_dependency('yard', '~> 0.9')
+  # s.add_development_dependency('test-unit-minitest', '>= 0.9.1')
+  s.add_development_dependency('minitest', '5.11')
 end
